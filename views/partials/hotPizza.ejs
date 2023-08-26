@@ -1,0 +1,126 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Hot Pizza Meals</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+    </div>
+    <div class="container-wrap">
+        <div class="row no-gutters d-flex">
+            <% pizzasData.forEach(function(item){%>
+                <div class="col-lg-4 d-flex ftco-animate">
+                    
+                    <div class="services-wrap d-flex">
+                        <a href="#" class="img" style="background-image: url(<%=item.img%>)"></a>
+                        <div class="text p-2">
+                            
+                            <h3><%= item.productName %></h3>
+                            <p><%= item.description %></p>
+                            <p class="price ">
+                                <input type="text" class="productId" hidden value="<%= item.id %>">
+                                <span  class="productPrice">$<%=item.small%></span> <button class="ProductAdd ml-2 btn btn-white btn-outline-white">Order</button>
+                                
+                                <select  class="selectMenu ml-1 btn btn-white btn-outline-white ">
+                                    <option selected value="small">small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                  </select>
+                                  </p>		
+                                
+        
+
+                        </div>
+                    </div>
+                </div>
+            <%}); %>
+            
+        
+
+        
+        
+        
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2 class="mb-4">Our Menu Pricing</h2>
+        <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+        <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <% pricing.forEach(function(item){%>
+            <div class="pricing-entry d-flex ftco-animate">
+                <div class="img" style="background-image: url(<%=item.img%>);"></div>
+                <div class="desc pl-3">
+                    
+                    <div class="d-flex text align-items-center">
+                        <input type="text" class="productId" hidden value="<%= item.id %>">
+                        <h3><span><%=item.productName%></span></h3>
+                        <div class="d-flex">
+                            <input type="text" class="productId" hidden value="<%= item.id %>">
+                            <span  class="productPrice">$<%=item.small%></span> 
+                            <button class="ProductAdd ml-2 btn btn-white btn-outline-white">Order</button>
+                            
+                            <select  class="selectMenu ml-1 btn btn-white btn-outline-white ">
+                                <option selected value="small">small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                              </select>
+                              </div>
+                    </div>
+                    
+                    <div class="d-block">
+                        <p><%=item.description%></p>
+                    </div>
+                </div>
+            </div>
+            <%}); %>
+        
+        </div>
+
+        <div class="col-md-6"> 
+        <% pricing2.forEach(function(item){%>
+            <div class="pricing-entry d-flex ftco-animate">
+                <div class="img" style="background-image: url(<%=item.img%>);"></div>
+                <div class="desc pl-3">
+                    
+                    <div class="d-flex text align-items-center">
+                        <input type="text" class="productId" hidden value="<%= item.id %>">
+                        <h3><span><%=item.productName%></span></h3>
+                        
+                        <div class="d-flex">
+                            <input type="text" class="productId" hidden value="<%= item.id %>">
+                            <span  class="productPrice">$<%=item.small%></span> 
+                            <button class="ProductAdd ml-2 btn btn-white btn-outline-white">Order</button>
+                            
+                            <select  class="selectMenu ml-1 btn btn-white btn-outline-white ">
+                                <option selected value="small">small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                              </select>
+                        </div>	
+                        
+                    </div>
+                    
+                    <div class="d-block">
+                        <p><%=item.description%></p>
+                    </div>
+                </div>
+            </div>
+            <%}); %>
+        </div> 
+    </div>
+    </div>
+</section>
+
+<style>
+    .productPrice{
+        width: 80px;
+    }
+</style>
